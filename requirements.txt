@@ -1,0 +1,3 @@
+pyiceberg==0.8.1
+pandas
+pyarrow==19.0.0
