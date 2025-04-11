@@ -14,7 +14,7 @@ class DFToIceberg():
             s3_access_key_id=s3_access_key_id,
             s3_secret_access_key=s3_secret,
         )
-        self.catalog = self.hive_catalog.catalog
+        self.catalog = self.hive_catalog._get_catalog()
 
     def save_to_iceberg(self, df: pd.DataFrame, iceberg_table_name: str):
         # save to format iceberg
